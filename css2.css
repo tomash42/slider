@@ -1,0 +1,97 @@
+*{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.secOne{
+    background-color: rgb(231, 81, 81);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+}
+.container{
+background: red;
+max-width: 1100px;
+width: 100%;
+
+}
+.maincard .cards{
+    display: flex;
+}
+.maincard .cards .card{
+background: orange;
+}
+/* cztery divy maja ten sam wymiar */
+.cards
+.card 
+.conntent 
+.imgConntent{
+    border: 3px solid rgb(0, 225, 255);
+    margin-bottom: 2rem;
+    height: 10rem;
+    width: 10rem;
+}
+.cards
+.card 
+.conntent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* wypelnenie ddivow obrazem  */
+.card 
+.conntent 
+.imgConntent img{
+border-radius: 50%;
+height: 100%;
+object-fit: cover;
+width: 100%;
+}
+
+.card .conntent .details .name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.card .conntent .details .description{
+font-size: .5rem;
+
+}
+.card .conntent .media-icons{
+    display: flex;
+}
+.card .conntent .media-icons a{
+    background:                 rgb(17, 33, 87);
+    border-radius:              50%;
+    border: 2px solid transparent;
+    color:                       chartreuse;
+    font-size: 1rem;
+    line-height:                2rem;
+    height:                     2rem;
+    text-align:                 center;
+    transition: all .4s ease;
+    width:                      2rem;
+ 
+
+}
+.card .conntent .media-icons a:hover{
+    background: rgba(255, 255, 255, 0);
+    border-color: rgb(10, 255, 2);
+    color: orangered;
+}
+
+.maincard{
+    border: 1px solid rgb(217, 255, 0);
+
+    border-color: rgb(238, 255, 0);
+
+    width: 50%;
+}
