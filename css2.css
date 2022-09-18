@@ -16,23 +16,50 @@
 
 }
 .container{
-background: red;
-max-width: 1100px;
+
+max-width: 42rem;
+padding: 3rem 0;
+overflow: hidden;
 width: 100%;
 
 }
+.container .maincard{
+    
+    display: flex;
+        justify-content: space-evenly;
+    width: 200%;
+    transition: all 2s ease;
+}
 .maincard .cards{
     display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+    width: calc(100% / 2 - 10px);
+    flex-wrap: wrap;
+  
+}
+#inpt-2:checked~.maincard{
+    margin-left: -100%;
 }
 .maincard .cards .card{
-background: orange;
+background-color: aliceblue;
+border-radius: 1rem;
+padding: 1.5rem;
+
+width: calc(100% / 3 - 10px);
+transition:  all .5s ease;
+}
+.maincard .cards .card:hover{
+    transform: translateY(-.5rem);
 }
 /* cztery divy maja ten sam wymiar */
 .cards
 .card 
 .conntent 
 .imgConntent{
-    border: 3px solid rgb(0, 225, 255);
+    background: greenyellow;
+
+    border-radius: 50%;
     margin-bottom: 2rem;
     height: 10rem;
     width: 10rem;
@@ -51,9 +78,13 @@ background: orange;
 .card 
 .conntent 
 .imgConntent img{
+    background: rgb(17, 33, 87);;;
+
 border-radius: 50%;
+border: .2rem solid chartreuse;
 height: 100%;
 object-fit: cover;
+padding: .3rem;
 width: 100%;
 }
 
@@ -89,9 +120,57 @@ font-size: .5rem;
 }
 
 .maincard{
-    border: 1px solid rgb(217, 255, 0);
+ 
+    width: 100%;
+}
+/* Buttuon slider  */
+.btnSlider{
+    display: flex;
+        justify-content: center;
+    margin: 1rem;
+}
+.btnSlider label{
+    background: rgb(255, 255, 255); 
+    border-radius: 30%;
+    height: .6rem;
+    margin: 0 .2rem;
+    width: .6rem;
+    transition:all .3s ease;
+}
+.btnSlider label.active{
+    width: 1.3rem;
+   
+}
+#inpt-1:checked ~ .btnSlider label.lblSliderOne{
+    width: 1.3rem;
+    
+  
+}
+#inpt-2:checked ~ .btnSlider label.lblSliderTwo{
+    width: 1.3rem;
+}
+#inpt-2:checked ~ .btnSlider label.lblSliderOne{
+    width: .5rem;
+}
+#inpt-1:checked ~ .btnSlider label.lblSliderTwo{
+    width: .5rem;
+}
+input[type="radio"]{
+    display: none;
+}
 
-    border-color: rgb(238, 255, 0);
 
-    width: 50%;
+/* responsible */
+@media (max-width:850px ){
+
+    .maincard .cards .card{
+        width: calc(100% / 2 - 10px);
+        margin: 1rem 0 .5rem;
+    }
+}
+@media (max-width:700px ){
+
+    .maincard .cards .card{
+  width: 100%;
+    }
 }
